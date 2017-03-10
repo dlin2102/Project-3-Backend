@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Location.destroy_all
+Activity.destroy_all
+
+paris = Location.create({name: "Paris"})
+dc = Location.create({name: "District of Colombia"})
+berlin = Location.create({name: "Berlin"})
