@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20170310182154) do
     t.string   "photo_url"
     t.string   "website_url"
     t.string   "description"
+    t.integer  "location_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["location_id"], name: "index_activities_on_location_id", using: :btree
   end
 
   create_table "locations", force: :cascade do |t|
@@ -32,4 +34,5 @@ ActiveRecord::Schema.define(version: 20170310182154) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "activities", "locations"
 end

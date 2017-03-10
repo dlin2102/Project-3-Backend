@@ -7,6 +7,7 @@ class CreateActivities < ActiveRecord::Migration[5.0]
       t.string :photo_url
       t.string :website_url
       t.string :description
+      t.references :location, index: true, foreign_key: true
 
       t.timestamps
     end
