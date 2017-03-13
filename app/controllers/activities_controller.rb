@@ -1,7 +1,5 @@
 class ActivitiesController < ApplicationController
-
-  # GET /activities
-  # GET /activities.json
+  
   def index
     @location = Location.find(params[:location_id])
     @activities = @location.activities.all
