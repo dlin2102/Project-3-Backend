@@ -22,7 +22,7 @@ parisActivity1 = Activity.create({
         location: paris
 })
 parisActivity2 = Activity.create({
-        name: "Le Grenir a Pain",
+        name: "Le Grenir a Pan",
         address: "12 rue de la gare 49100 Angers",
         category: "Food",
         photo_url: "http://legrenierapain.com/wp-content/uploads/2015/02/slide062-700px.jpg",
