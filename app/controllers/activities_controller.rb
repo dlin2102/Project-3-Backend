@@ -5,11 +5,13 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    render json: @activities
   end
 
   # GET /activities/1
   # GET /activities/1.json
   def show
+    render json: @activity
   end
 
   # GET /activities/new
