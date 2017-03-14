@@ -12,8 +12,14 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @location = Location.create(location_params)
-    render json: @location
+    @location = Location.new(location_params)
+      if Location.exists?(name: @location.name)
+        @existing = Location.find_by(name: @location.name)
+        render json: @existing
+      else
+        @location.save
+        render json: @location
+      end
   end
 
   def update
@@ -28,7 +34,7 @@ class LocationsController < ApplicationController
   end
 
   private
-  
+
   def location_params
       params.require(:location).permit(:name)
   end
