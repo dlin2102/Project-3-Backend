@@ -6,8 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-
-
 module TouristApplication
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -16,6 +14,7 @@ module TouristApplication
     config.api_only = true
 
     config.active_record.raise_in_transactional_callbacks = true
+
 
     config.middleware.insert_before 0, Rack::Cors do
      allow do

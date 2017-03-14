@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
 
   def index
     @locations = Location.all
@@ -27,8 +28,9 @@ class LocationsController < ApplicationController
   end
 
   private
+  
   def location_params
       params.require(:location).permit(:name)
-    end
+  end
 
   end
