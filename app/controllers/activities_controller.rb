@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  
+
   def index
     @location = Location.find(params[:location_id])
     @activities = @location.activities.all
