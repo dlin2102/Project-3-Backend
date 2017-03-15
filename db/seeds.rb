@@ -8,9 +8,9 @@
 Location.destroy_all
 Activity.destroy_all
 
-paris = Location.create({name: "Paris"})
-dc = Location.create({name: "District of Colombia"})
-berlin = Location.create({name: "Berlin"})
+paris = Location.create({name: "Paris, France"})
+dc = Location.create({name: "Washington, DC, United States"})
+berlin = Location.create({name: "Berlin, Germany"})
 
 parisActivity1 = Activity.create({
         name: "Eiffel Tower",
