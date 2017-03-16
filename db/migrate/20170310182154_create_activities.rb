@@ -2,6 +2,7 @@ class CreateActivities < ActiveRecord::Migration[5.0]
   def change
     create_table :activities do |t|
       t.string :name
+      t.integer :upvote, :default => 0
       t.string :address
       t.string :category
       t.string :photo_url

@@ -15,6 +15,8 @@ class ActivitiesController < ApplicationController
   def show
     @location = Location.find(params[:location_id])
     @activity = @location.activities.find(params[:id])
+    puts @activity.name
+    puts @activity.upvote
     render json: @activity
   end
 
@@ -39,7 +41,7 @@ class ActivitiesController < ApplicationController
 
   private
     def activity_params
-      params.require(:activity).permit(:name,:address,:category,:photo_url,:website_url,:description)
+      params.require(:activity).permit(:name, :upvote, :address,:category,:photo_url,:website_url,:description)
     end
 
   end

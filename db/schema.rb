@@ -17,14 +17,15 @@ ActiveRecord::Schema.define(version: 20170310182154) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "name"
+    t.integer  "upvote",      default: 0
     t.string   "address"
     t.string   "category"
     t.string   "photo_url"
     t.string   "website_url"
     t.string   "description"
     t.integer  "location_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.index ["location_id"], name: "index_activities_on_location_id", using: :btree
   end
 
